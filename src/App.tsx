@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import SignUp from './components/SignUp/SignUp';
+import Login from './components/Login/Login';
+import ConnectShopify from './components/ConnectShopify/ConnectShopify';
+import ConnectCustomerEmail from './components/ConnectCustomerEmail/ConnectCustomerEmail';
+import SuccessShopify from './components/SuccessShopify/SuccessShopify';
+import NoShopify from './components/NoShopify/NoShopify';
+import NoEmail from './components/NoEmail/NoEmail';
+import SuccessPage from './components/SuccessPage/SuccessPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/connect-shopify" element={<ConnectShopify />} />
+          <Route path="/success-shopify" element={<SuccessShopify />} />
+          <Route path="/no-shopify" element={<NoShopify />} />
+          <Route path="/connect-email" element={<ConnectCustomerEmail />} />
+          <Route path="/no-email" element={<NoEmail />} />
+          <Route path="/success" element={<SuccessPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default App; 

@@ -1,0 +1,43 @@
+.progress-bar {
+  width: auto;
+  height: 8px;
+  border: 1px solid #c9d3e0;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.progress {
+  display: block;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  background-color: #c9d3e0;
+  z-index: 2;
+  border-radius: 4px;
+  border: 1px solid #c9d3e0;
+}
+
+.progress_1 {
+  width: 25%;
+}
+.progress_2 {
+  width: 50%;
+}
+.progress_3 {
+  width: 75%;
+}
+.progress_4 {
+  width: 100%;
+}
+
+.step {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-progress {
+    display: none;
+  }
+}
